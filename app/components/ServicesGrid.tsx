@@ -107,6 +107,19 @@ export function ServicesGrid() {
         />
 
         <div
+          className="absolute flex items-center justify-center"
+          style={{ left: 433, top: 300, width: 414, height: 100 }}
+        >
+          <Image
+            src="/nav-logo.png"
+            alt="Joyzen Logo"
+            width={1080}
+            height={1100}
+            className="w-50 h-60 object-contain"
+          />
+        </div>
+
+        <div
           className={`absolute ${glassCard} overflow-hidden`}
           style={{ left: 867, top: 0, width: 413, height: 340 }}
         >
