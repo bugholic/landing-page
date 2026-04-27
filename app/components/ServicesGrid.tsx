@@ -41,12 +41,57 @@ export function ServicesGrid() {
   return (
     <section
       id="services"
-      className="relative flex min-h-[910px] items-center justify-center overflow-hidden"
+      className="relative flex min-h-[910px] items-center justify-center overflow-hidden bg-white"
     >
-      <div className="absolute inset-0 z-0">
-        <Image src="/gallery-row-1.jpg" alt="" fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/10" />
-      </div>
+      {/* Background gradient blobs */}
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          left: "0%",
+          top: "5%",
+          width: 420,
+          height: 220,
+          background:
+            "radial-gradient(ellipse at center, rgba(255,180,120,0.38) 0%, rgba(255,200,160,0.18) 55%, transparent 80%)",
+          filter: "blur(18px)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          right: "0%",
+          top: "5%",
+          width: 380,
+          height: 200,
+          background:
+            "radial-gradient(ellipse at center, rgba(220,240,140,0.32) 0%, rgba(200,230,160,0.15) 55%, transparent 80%)",
+          filter: "blur(18px)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          left: "2%",
+          bottom: "5%",
+          width: 380,
+          height: 220,
+          background:
+            "radial-gradient(ellipse at center, rgba(100,210,230,0.28) 0%, rgba(140,220,240,0.12) 55%, transparent 80%)",
+          filter: "blur(18px)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          right: "2%",
+          bottom: "5%",
+          width: 380,
+          height: 220,
+          background:
+            "radial-gradient(ellipse at center, rgba(220,160,220,0.28) 0%, rgba(240,180,230,0.12) 55%, transparent 80%)",
+          filter: "blur(18px)",
+        }}
+      />
 
       <div className="relative z-10" style={{ width: 1280, height: 700 }}>
         <TextCard
@@ -65,26 +110,38 @@ export function ServicesGrid() {
           className={`absolute ${glassCard} overflow-hidden`}
           style={{ left: 867, top: 0, width: 413, height: 340 }}
         >
-          <Image src="/gallery-row-2.jpg" alt="Care" fill className="object-cover" />
+          <Image src="/gallery-row-1.jpg" alt="Care" fill className="object-cover" />
         </div>
 
         <TextCard
           title="Focused on Root, Not Symptoms"
           description="Hormones, lifestyle, fertility, long-term health — everything connected, everything managed."
-          style={{ left: 0, top: 360, width: 413, height: 340 }}
+          style={{
+            left: 0,
+            top: 360,
+            width: 413,
+            height: 340,
+            background: "linear-gradient(135deg, rgba(160,220,240,0.45) 0%, rgba(200,235,245,0.25) 60%, rgba(255,255,255,0.10) 100%)",
+          }}
         />
 
         <div
           className={`absolute ${glassCard} overflow-hidden`}
           style={{ left: 433, top: 420, width: 414, height: 280 }}
         >
-          <Image src="/person-circle.jpg" alt="Care team" fill className="object-cover" />
+          <Image src="/gallery-row-2.jpg" alt="Care team" fill className="object-cover" />
         </div>
 
         <TextCard
           title="Designed for Better Outcomes"
           description="Not more visits, not more confusion. Clear direction. Continuous support. Real results."
-          style={{ left: 867, top: 360, width: 413, height: 340 }}
+          style={{
+            left: 867,
+            top: 360,
+            width: 413,
+            height: 340,
+            background: "linear-gradient(135deg, rgba(230,180,230,0.40) 0%, rgba(245,210,240,0.22) 60%, rgba(255,255,255,0.10) 100%)",
+          }}
         />
       </div>
     </section>
