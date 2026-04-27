@@ -4,7 +4,7 @@ export function BuiltForModernLife() {
   return (
     <section
       id="about"
-      className="relative flex min-h-[910px] flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 px-8"
+      className="relative flex min-h-[910px] flex-col items-center justify-center overflow-hidden bg-white px-8"
     >
       <div className="flex flex-col items-center gap-3 text-center">
         <h2
@@ -30,7 +30,7 @@ export function BuiltForModernLife() {
       <div
         className="relative mt-10 h-[340px] w-[340px] overflow-hidden rounded-full shadow-[0_2px_17.5px_0_rgba(0,0,0,0.10)]"
       >
-        <Image src="/person-circle.jpg" alt="Modern care" fill className="object-cover" />
+        <Image src="/person-circle.jpg" alt="Modern care" fill className="object-cover object-top" />
       </div>
 
       <div className="mt-14 flex max-w-[800px] flex-col items-center gap-[30px] text-center">
