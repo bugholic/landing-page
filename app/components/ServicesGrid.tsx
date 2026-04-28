@@ -2,6 +2,8 @@ import Image from "next/image";
 
 const glassCard =
   "rounded-3xl border border-white/20 bg-white/[0.06] shadow-[0_2px_17.5px_0_rgba(0,0,0,0.10)] backdrop-blur-sm";
+const hoverCard =
+  "transition-transform duration-500 ease-out will-change-transform hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[0_28px_60px_-24px_rgba(15,23,42,0.35)]";
 
 interface TextCardProps {
   title: string;
@@ -12,7 +14,7 @@ interface TextCardProps {
 function TextCard({ title, description, style }: TextCardProps) {
   return (
     <div
-      className={`absolute ${glassCard} flex flex-col justify-end p-8`}
+      className={`absolute ${glassCard} ${hoverCard} flex flex-col justify-end p-8`}
       style={style}
     >
       <h3
@@ -47,36 +49,24 @@ export function ServicesGrid() {
       <div
         className="pointer-events-none absolute"
         style={{
-          left: "0%",
-          top: "5%",
-          width: 420,
-          height: 220,
-          background:
-            "radial-gradient(ellipse at center, rgba(255,180,120,0.38) 0%, rgba(255,200,160,0.18) 55%, transparent 80%)",
-          filter: "blur(18px)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute"
-        style={{
-          right: "0%",
-          top: "5%",
-          width: 380,
-          height: 200,
-          background:
-            "radial-gradient(ellipse at center, rgba(220,240,140,0.32) 0%, rgba(200,230,160,0.15) 55%, transparent 80%)",
-          filter: "blur(18px)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute"
-        style={{
           left: "2%",
           bottom: "5%",
           width: 380,
           height: 220,
           background:
             "radial-gradient(ellipse at center, rgba(100,210,230,0.28) 0%, rgba(140,220,240,0.12) 55%, transparent 80%)",
+          filter: "blur(18px)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          right: "2%",
+          bottom: "5%",
+          width: 380,
+          height: 220,
+          background:
+            "radial-gradient(ellipse at center, rgba(220,160,220,0.28) 0%, rgba(240,180,230,0.12) 55%, transparent 80%)",
           filter: "blur(18px)",
         }}
       />
@@ -120,10 +110,15 @@ export function ServicesGrid() {
         </div>
 
         <div
-          className={`absolute ${glassCard} overflow-hidden`}
+          className={`group absolute ${glassCard} ${hoverCard} overflow-hidden`}
           style={{ left: 867, top: 0, width: 413, height: 340 }}
         >
-          <Image src="/gallery-row-1.jpg" alt="Care" fill className="object-cover" />
+          <Image
+            src="/gallery-row-1.jpg"
+            alt="Care"
+            fill
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          />
         </div>
 
         <TextCard
@@ -139,10 +134,15 @@ export function ServicesGrid() {
         />
 
         <div
-          className={`absolute ${glassCard} overflow-hidden`}
+          className={`group absolute ${glassCard} ${hoverCard} overflow-hidden`}
           style={{ left: 433, top: 420, width: 414, height: 280 }}
         >
-          <Image src="/gallery-row-2.jpg" alt="Care team" fill className="object-cover" />
+          <Image
+            src="/gallery-row-2.jpg"
+            alt="Care team"
+            fill
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          />
         </div>
 
         <TextCard

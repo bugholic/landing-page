@@ -85,11 +85,11 @@ export function Statement() {
 
       const startReveal = windowHeight * 0.7;
       const endReveal = -elementHeight * 0.3;
-      
+
       if (elementTop > startReveal) {
         return;
       }
-      
+
       if (elementTop < endReveal) {
         return;
       }
@@ -97,7 +97,7 @@ export function Statement() {
       const totalScroll = startReveal - endReveal;
       const currentScroll = startReveal - elementTop;
       const progress = Math.max(0, Math.min(currentScroll / totalScroll, 1));
-      
+
       const wordsToReveal = Math.floor(progress * words.length);
       setRevealedCount((prev) => Math.max(prev, wordsToReveal));
     };
@@ -109,7 +109,31 @@ export function Statement() {
   }, []);
 
   return (
-    <section className="flex min-h-[870px] items-center justify-center bg-white px-10">
+    <section className="relative flex min-h-[870px] items-center justify-center bg-white px-10">
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          left: "0%",
+          bottom: "5%",
+          width: 420,
+          height: 220,
+          background:
+            "radial-gradient(ellipse at center, rgba(255,180,120,0.38) 0%, rgba(255,200,160,0.18) 55%, transparent 80%)",
+          filter: "blur(18px)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          right: "0%",
+          bottom: "5%",
+          width: 380,
+          height: 200,
+          background:
+            "radial-gradient(ellipse at center, rgba(220,240,140,0.32) 0%, rgba(200,230,160,0.15) 55%, transparent 80%)",
+          filter: "blur(18px)",
+        }}
+      />
       <div ref={containerRef}>
         <p
           className="max-w-[1114px] text-center text-[40px] font-medium leading-[1.1] text-black"
