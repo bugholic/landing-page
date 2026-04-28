@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./BuiltForModernLife.module.css";
 
 export function BuiltForModernLife() {
   return (
@@ -6,6 +7,10 @@ export function BuiltForModernLife() {
       id="about"
       className="relative flex min-h-[910px] flex-col items-center justify-center overflow-hidden bg-white px-8"
     >
+      <div
+        className={`pointer-events-none absolute bottom-[2%] left-0 right-0 z-0 h-[250px] w-full rounded-full bg-gradient-to-r from-[#0f766e] via-[#14b8a6] to-[#99f6e4] opacity-35 blur-3xl mix-blend-multiply ${styles.bottomGlow}`}
+      />
+
       <div className="flex flex-col items-center gap-3 text-center">
         <h2
           className="text-[50px] font-normal leading-[1.04] text-black"
@@ -30,7 +35,7 @@ export function BuiltForModernLife() {
       <div
         className="relative mt-10 h-[340px] w-[340px] overflow-hidden rounded-full shadow-[0_2px_17.5px_0_rgba(0,0,0,0.10)]"
       >
-        <Image src="/person-circle.jpg" alt="Modern care" fill className="object-cover object-top" />
+        <Image src="/person-circle.jpg" alt="Modern care" fill sizes="(max-width: 768px) 100vw, 340px" className="object-cover object-top" />
       </div>
 
       <div className="mt-14 flex max-w-[800px] flex-col items-center gap-[30px] text-center">

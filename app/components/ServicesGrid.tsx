@@ -89,28 +89,29 @@ export function ServicesGrid() {
         />
 
         <div
-          className="absolute flex items-center justify-center"
-          style={{ left: 433, top: 300, width: 414, height: 100 }}
-        >
-          <Image
-            src="/nav-logo.png"
-            alt="Joyzen Logo"
-            width={1080}
-            height={1100}
-            className="w-50 h-60 object-contain"
-          />
-        </div>
+           className="absolute flex items-center justify-center"
+           style={{ left: 433, top: 300, width: 414, height: 100 }}
+         >
+           <Image
+             src="/nav-logo.png"
+             alt="Joyzen Logo"
+             fill
+             sizes="414px"
+             className="object-contain p-4"
+           />
+         </div>
 
         <div
           className={`group absolute ${glassCard} ${hoverCard} overflow-hidden`}
           style={{ left: 867, top: 0, width: 413, height: 340 }}
         >
           <Image
-            src="/gallery-row-1.jpg"
-            alt="Care"
-            fill
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-          />
+             src="/gallery-row-1.jpg"
+             alt="Care"
+             fill
+             sizes="(max-width: 768px) 100vw, 413px"
+             className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+           />
         </div>
 
         <TextCard
@@ -130,11 +131,12 @@ export function ServicesGrid() {
           style={{ left: 433, top: 420, width: 414, height: 280 }}
         >
           <Image
-            src="/gallery-row-2.jpg"
-            alt="Care team"
-            fill
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-          />
+             src="/gallery-row-2.jpg"
+             alt="Care team"
+             fill
+             sizes="(max-width: 768px) 100vw, 414px"
+             className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+           />
         </div>
 
         <TextCard

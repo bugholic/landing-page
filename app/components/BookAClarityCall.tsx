@@ -35,12 +35,13 @@ export function BookAClarityCall() {
               alt="Joyzen"
               width={15}
               height={15}
+              className="h-auto w-auto"
             />
           </a>
         </div>
 
-        <div className="flex flex-col gap-6 opacity-60 shrink-0">
-          <Image src={"/logo.svg"} alt="logo" width={200} height={200} />
+        <div className="relative flex h-[200px] w-[200px] shrink-0 flex-col gap-6 opacity-60">
+          <Image src={"/logo.svg"} alt="logo" fill sizes="200px" className="object-contain" />
         </div>
       </div>
     </section>

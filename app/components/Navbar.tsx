@@ -1,34 +1,46 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 export function Navbar() {
+  const [activeLink, setActiveLink] = useState<string | null>(null);
+
+  const navLinks = [
+    { href: "#services", label: "About" },
+    { href: "#about", label: "Programs" },
+    { href: "#stories", label: "Who It's For" },
+    { href: "#pricing", label: "Products" },
+  ];
+
+  const glassActiveStyle = "text-white border border-white/30 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5";
+
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 flex h-[90px] items-center justify-between px-[50px]">
       <div className="flex items-center gap-10">
-        <div className="flex items-center gap-3">
+        <div className="relative flex h-[100px] w-[150px] items-center gap-3">
           <Image
             src="/nav-logo.png"
             alt="Joyzen"
-            width={150}
-            height={100}
-            className=""
+            fill
+            sizes="150px"
+            className="object-contain"
           />
         </div>
       </div>
       <div className="hidden items-center gap-8 text-sm font-medium text-white/80 md:flex">
-        <a href="#services" className="hover:text-white transition-colors">
-          About
-        </a>
-        <a href="#about" className="hover:text-white transition-colors">
-          Programs{" "}
-        </a>
-        <a href="#stories" className="hover:text-white transition-colors">
-          {
-            "Who It's For"
-          }
-        </a>
-        <a href="#pricing" className="hover:text-white transition-colors">
-          Products
-        </a>
+        {navLinks.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={() => setActiveLink(link.href)}
+            className={`hover:text-white hover:border hover:border-white/30 hover:bg-white/10 hover:backdrop-blur-sm hover:rounded-full hover:px-3 hover:py-1.5 transition-all ${
+              activeLink === link.href ? glassActiveStyle : ""
+            }`}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
       <div className="flex items-center gap-4">
         <a
@@ -41,7 +53,7 @@ export function Navbar() {
             alt="Joyzen"
             width={15}
             height={15}
-            className=""
+            className="h-auto w-auto"
           />
         </a>
       </div>
