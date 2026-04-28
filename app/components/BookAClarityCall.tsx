@@ -3,6 +3,10 @@ import Image from "next/image";
 export function BookAClarityCall() {
   return (
     <section className="relative flex min-h-[600px] items-center justify-center overflow-hidden bg-white px-8">
+      {/* Background Gradients */}
+      <div className="pointer-events-none absolute -bottom-[10%] -left-[10%] h-[400px] w-[800px] rounded-[100%] bg-[#C6EDFC] opacity-100 blur-[140px]" />
+      <div className="pointer-events-none absolute -bottom-[10%] -right-[10%] h-[400px] w-[800px] rounded-[100%] bg-[#ECD1F3] opacity-100 blur-[140px]" />
+
       <div
         className={`relative z-10 flex w-full max-w-7xl items-center justify-between gap-16 rounded-3xl border border-white/30 bg-white/[0.06] px-[90px] py-[100px] shadow-[0_2px_17.5px_0_rgba(0,0,0,0.10)] backdrop-blur-sm`}
       >

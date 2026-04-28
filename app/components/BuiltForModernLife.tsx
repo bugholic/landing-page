@@ -5,10 +5,13 @@ export function BuiltForModernLife() {
   return (
     <section
       id="about"
-      className="relative flex min-h-[910px] flex-col items-center justify-center overflow-hidden bg-white px-8"
+      className="relative flex min-h-[910px] flex-col items-center justify-center overflow-hidden bg-[#f5f5ee] px-8"
     >
       <div
-        className={`pointer-events-none absolute bottom-[2%] left-0 right-0 z-0 h-[250px] w-full rounded-full bg-gradient-to-r from-[#0f766e] via-[#14b8a6] to-[#99f6e4] opacity-35 blur-3xl mix-blend-multiply ${styles.bottomGlow}`}
+        className={`pointer-events-none absolute bottom-[2%] right-[5%] z-0 h-[80px] w-[60%] rounded-full bg-gradient-to-r from-[#10b981] via-[#34d399] to-[#6ee7b7] opacity-40 blur-3xl ${styles.bottomGlow}`}
+      />
+      <div
+        className="pointer-events-none absolute bottom-[5%] left-[5%] z-0 h-[150px] w-[25%] rounded-full bg-gradient-to-r from-[#3b82f6] via-[#60a5fa] to-[#93c5fd] opacity-35 blur-3xl"
       />
 
       <div className="flex flex-col items-center gap-3 text-center">
