@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./ServicesGrid.module.css";
 
 const glassCard =
   "rounded-3xl border border-white/20 bg-white/[0.06] shadow-[0_2px_17.5px_0_rgba(0,0,0,0.10)] backdrop-blur-sm";
@@ -71,16 +72,7 @@ export function ServicesGrid() {
         }}
       />
       <div
-        className="pointer-events-none absolute"
-        style={{
-          right: "2%",
-          bottom: "5%",
-          width: 380,
-          height: 220,
-          background:
-            "radial-gradient(ellipse at center, rgba(220,160,220,0.28) 0%, rgba(240,180,230,0.12) 55%, transparent 80%)",
-          filter: "blur(18px)",
-        }}
+        className={`pointer-events-none absolute bottom-[2%] left-0 right-0 z-0 h-[250px] w-full rounded-full bg-gradient-to-r from-[#ff8a1f] via-[#ffb62a] to-[#fff06a] opacity-35 blur-3xl mix-blend-multiply ${styles.bottomGlow}`}
       />
 
       <div className="relative z-10" style={{ width: 1280, height: 700 }}>
@@ -157,6 +149,7 @@ export function ServicesGrid() {
           }}
         />
       </div>
+
     </section>
   );
 }

@@ -1,0 +1,13 @@
+.bottomGlow {
+  animation: bottomGlowDrift 10s ease-in-out infinite alternate;
+}
+
+@keyframes bottomGlowDrift {
+  0% {
+    transform: translateX(0) scale(0.98);
+  }
+
+  100% {
+    transform: translateX(3.5%) scale(1.02);
+  }
+}
